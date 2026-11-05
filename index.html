@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - NekoNote</title>
+    <style>
+        :root {
+            --bg-color: #0b1120;
+            --card-bg: rgba(30, 41, 59, 0.75);
+            --text-primary: #f8fafc;
+            --text-secondary: #94a3b8;
+            --accent: #38bdf8;
+            --accent-glow: rgba(56, 189, 248, 0.15);
+            --border: rgba(255, 255, 255, 0.1);
+        }
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            background-image: radial-gradient(circle at 50% 0%, rgba(56, 189, 248, 0.12), transparent 50%);
+            color: var(--text-primary);
+            line-height: 1.7;
+            margin: 0;
+            padding: 40px 16px;
+            display: flex;
+            justify-content: center;
+        }
+        .container {
+            max-width: 860px;
+            width: 100%;
+            background: var(--card-bg);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid var(--border);
+            border-radius: 24px;
+            padding: 48px;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+        }
+        @media (max-width: 640px) {
+            .container {
+                padding: 24px 20px;
+                border-radius: 16px;
+            }
+        }
+        header {
+            text-align: center;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 28px;
+            margin-bottom: 32px;
+        }
+        h1 {
+            font-size: 2.2rem;
+            margin: 0 0 10px;
+            background: linear-gradient(135deg, #38bdf8, #818cf8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .meta-info {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+        h2 {
+            font-size: 1.35rem;
+            color: var(--accent);
+            margin-top: 32px;
+            margin-bottom: 12px;
+            border-left: 4px solid var(--accent);
+            padding-left: 12px;
+        }
+        p, li {
+            color: var(--text-secondary);
+            font-size: 1.02rem;
+        }
+        ul {
+            padding-left: 24px;
+        }
+        li {
+            margin-bottom: 8px;
+        }
+        strong {
+            color: var(--text-primary);
+        }
+        .highlight-box {
+            background: var(--accent-glow);
+            border: 1px solid rgba(56, 189, 248, 0.3);
+            border-radius: 14px;
+            padding: 18px 22px;
+            margin: 24px 0;
+        }
+        footer {
+            margin-top: 48px;
+            padding-top: 24px;
+            border-top: 1px solid var(--border);
+            text-align: center;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+        a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>Privacy Policy for NekoNote</h1>
+        <div class="meta-info">
+            <strong>Effective Date:</strong> November 6, 2026<br>
+            <strong>Application:</strong> NekoNote (Package ID: <code>www.aftonstudio.nekonote</code>)<br>
+            <strong>Developer:</strong> Afton Studio
+        </div>
+    </header>
+
+    <div class="highlight-box">
+        <strong>Privacy Commitment Summary:</strong> NekoNote is built with a <strong>privacy-first, local-first</strong> architecture. We do not operate external data tracking servers, we do not sell or monetize your personal information, and we do not display third-party advertisements. Your notes, voice memos, checklists, and documents reside strictly on your own device unless you explicitly choose to back them up to your own private Google Drive account.
+    </div>
+
+    <h2>1. Local-First Data Storage (Your Data Stays With You)</h2>
+    <p>NekoNote operates as an offline-first productivity tool. All data you create within the app:</p>
+    <ul>
+        <li><strong>Notes & Checklists:</strong> Stored locally in a secure Room database on your device storage.</li>
+        <li><strong>Voice Memos & Audio:</strong> Stored strictly inside your app-specific internal private storage directory.</li>
+        <li><strong>Images & Document Attachments:</strong> Handled locally; files you import remain securely stored on your device.</li>
+        <li><strong>Habits & Mood Logs:</strong> Stored locally on your device with no external transmission.</li>
+    </ul>
+
+    <h2>2. Device Permissions and Why We Need Them</h2>
+    <p>NekoNote requests runtime permissions only when you access specific features, following the principle of least privilege:</p>
+    <ul>
+        <li><strong>Camera (<code>android.permission.CAMERA</code>):</strong> Used exclusively when you take a photo to attach to a note, scan text via on-device Optical Character Recognition (OCR), or scan a QR code for peer-to-peer offline note sharing. Camera data is processed entirely on-device and is never transmitted externally.</li>
+        <li><strong>Microphone (<code>android.permission.RECORD_AUDIO</code>):</strong> Used strictly when you tap the record button to capture voice memos inside notes.</li>
+        <li><strong>Audio Files (<code>READ_MEDIA_AUDIO</code> / <code>READ_EXTERNAL_STORAGE</code>):</strong> Required to discover and play local music files in the built-in ambient player and to allow selecting audio tracks for backup.</li>
+        <li><strong>Notifications & Exact Alarms (<code>POST_NOTIFICATIONS</code>, <code>SCHEDULE_EXACT_ALARM</code>):</strong> Allows NekoNote to trigger task alerts, scheduled reminders, and background backup progress notifications.</li>
+        <li><strong>Biometric Lock (<code>USE_BIOMETRIC</code>):</strong> Enables fingerprint or face unlocking for protected notes. Verification is handled directly by Android's hardware-backed biometric security; NekoNote never sees or stores raw biometric data.</li>
+        <li><strong>Nearby Devices & Wi-Fi:</strong> Used solely for the offline peer-to-peer QR/Radar note transfer feature between nearby devices without using the internet. No geolocation tracking is performed.</li>
+    </ul>
+
+    <h2>3. Google Sign-In and Google Drive Cloud Backup</h2>
+    <p>NekoNote offers an optional cloud backup and restore feature powered by Google Sign-In and the Google Drive REST API:</p>
+    <ul>
+        <li><strong>Scope of Access:</strong> We request access strictly to the restricted Application Data folder (<code>https://www.googleapis.com/auth/drive.appdata</code>).</li>
+        <li><strong>Isolation:</strong> NekoNote can <strong>only</strong> access its own dedicated hidden app folder in your Google Drive. NekoNote <strong>cannot</strong> view, access, edit, or delete any of your other personal files or folders in your Google Drive.</li>
+        <li><strong>Direct Connection:</strong> Backup files are encrypted in transit via HTTPS and uploaded directly between your device and Google's official cloud storage. We do not operate any intermediary servers.</li>
+        <li><strong>Google API Services User Data Policy Compliance:</strong> NekoNote's use and transfer to any other app of information received from Google APIs will adhere to the <a href="https://developers.google.com/terms/api-services-user-data-policy" target="_blank" rel="noopener">Google API Services User Data Policy</a>, including the Limited Use requirements.</li>
+    </ul>
+
+    <h2>4. In-App Purchases (Google Play Billing)</h2>
+    <p>NekoNote offers an optional lifetime Pro license (<code>nekonote_premium_lifetime</code>) via the official <strong>Google Play Billing Library</strong>:</p>
+    <ul>
+        <li>All payment processing is handled exclusively and securely by Google Play.</li>
+        <li>NekoNote never collects, handles, or stores your credit card numbers, banking credentials, or personal payment details.</li>
+        <li>We only receive an encrypted purchase token from Google Play to unlock Pro features across your devices.</li>
+    </ul>
+
+    <h2>5. Third-Party Libraries and SDKs</h2>
+    <p>NekoNote uses standard, privacy-conscious libraries solely for core functionality:</p>
+    <ul>
+        <li><strong>Google ML Kit Text Recognition:</strong> Provides high-speed OCR text extraction. Image processing takes place entirely on your device with no cloud transmission.</li>
+        <li><strong>Google Play In-App Review & Update API:</strong> Allows users to optionally review the app or receive in-app updates securely via Google Play.</li>
+    </ul>
+
+    <h2>6. Data Security and Privacy Protection</h2>
+    <p>We implement multi-layered defenses to ensure your personal notes remain private:</p>
+    <ul>
+        <li><strong>PIN & Biometric Lock:</strong> Protect individual sensitive notes or lock the entire application.</li>
+        <li><strong>Anti-Snoop Shield (FLAG_SECURE):</strong> Prevents unauthorized screen recording, screenshots, or task-switcher previews when viewing protected notes.</li>
+    </ul>
+
+    <h2>7. Data Retention and Deletion</h2>
+    <p>You have full and permanent control over your data:</p>
+    <ul>
+        <li>Deleting a note or file inside the app removes it permanently from device storage.</li>
+        <li>Uninstalling NekoNote completely erases all local application databases and stored files.</li>
+        <li>You can delete your cloud backup at any time directly through the app's Google Drive Settings screen or by managing app permissions at <a href="https://myaccount.google.com/connections" target="_blank" rel="noopener">Google Account Third-Party Connections</a>.</li>
+    </ul>
+
+    <h2>8. Children's Privacy</h2>
+    <p>NekoNote does not collect personal information from any user, including children under 13. The application is a general productivity utility suitable for all audiences.</p>
+
+    <h2>9. Policy Updates</h2>
+    <p>We may periodically update this Privacy Policy to reflect app enhancements or regulatory requirements. Any modifications will be posted to this URL with a revised effective date.</p>
+
+    <h2>10. Contact Us</h2>
+    <p>If you have any questions, inquiries, or feedback regarding this Privacy Policy or your data privacy in NekoNote, please contact us at:</p>
+    <ul>
+        <li><strong>Developer:</strong> Afton Studio</li>
+        <li><strong>Email:</strong> <a href="mailto:aftonstudio.dev@gmail.com">aftonstudio.dev@gmail.com</a></li>
+        <li><strong>GitHub Project:</strong> <a href="https://github.com/Afton-programmer/NekoNote" target="_blank" rel="noopener">https://github.com/Afton-programmer/NekoNote</a></li>
+    </ul>
+
+    <footer>
+        &copy; 2026 Afton Studio · NekoNote. All rights reserved.
+    </footer>
+</div>
+
+</body>
+</html>
